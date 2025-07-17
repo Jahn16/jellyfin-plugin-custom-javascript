@@ -67,7 +67,7 @@ namespace Jellyfin.Plugin.CustomJavaScript
                         indexContents = Regex.Replace(indexContents, scriptReplace, "", RegexOptions.Singleline);
 
                         // Insert script last in body
-                        int bodyClosing = indexContents.LastIndexOf("</body>");
+                        int bodyClosing = indexContents.LastIndexOf("</head>");
                         if (bodyClosing != -1)
                         {
                             indexContents = indexContents.Insert(bodyClosing, scriptElement);
